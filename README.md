@@ -12,7 +12,7 @@ ToDo List é uma aplicação simples, que permite o usuário organizar suas ativ
 - **SQLAlchemy 2.0.36**: Biblioteca ORM (Object-Relational Mapping) para interação com banco de dados.
 - **Alembic 1.14.0**: Ferramente para gerenciamento de versões do banco de dados (migrações).
 - **Pipenv**: Gerenciador de dependências virtual.
-- **Pyenv**: Gerenciador de multiplas versões do Python (se estiver usando Linux).
+- **Pyenv**: Gerenciador de multiplas versões do Python.
 - **Uvicorn**: Servidor ASGI para execução da aplicação FastAPI.
 - **DBeaver**: Gerenciador de banco de dados Universal.
 
