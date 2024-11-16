@@ -1,4 +1,4 @@
-import uvicorn
+from uvicorn import run
 from fastapi import FastAPI
 from project_todo_list.routers import todo_client_router, todo_list_router
 from shared.exception import NotFound
@@ -15,4 +15,4 @@ app.include_router(todo_client_router.router)
 app.add_exception_handler(NotFound, not_found_exception_handler)
 
 if __name__ == "__main__":
-    uvicorn.run(app, host='0.0.0.0', port=8000)
+    run(app, host='0.0.0.0', port=8000)
