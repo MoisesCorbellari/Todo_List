@@ -102,4 +102,4 @@ def valid_task_type(task_client_id, db): # linha adicionada
     if task_client_id is not None:
         ToDo_List = db.get(ToDoListClient, task_client_id) 
         if ToDo_List is None:
-            raise HTTPException(status_code=422, detail="O ID do tipo de tarefa não existe!") # retornando o objeto
+            raise HTTPException(status_code=422, detail="O tipo de tarefa não existe!") # retornando o objeto
