@@ -14,7 +14,7 @@ ToDo List é uma aplicação simples, que permite o usuário organizar suas ativ
 - **Pipenv**: Gerenciador de dependências virtual.
 - **Pyenv**: Gerenciador de multiplas versões do Python.
 - **Uvicorn**: Servidor ASGI para execução da aplicação FastAPI.
-- **DBeaver**: Gerenciador de banco de dados Universal.
+- **DBeaver**: Gerenciador de banco de dados universal.
 
 ## Estrutura do Projeto
 - A estrutura do projeto é organizada da seguinte forma:
@@ -63,3 +63,24 @@ ToDo List é uma aplicação simples, que permite o usuário organizar suas ativ
     - Atualizar uma tarefa existente por ID;
     - Finalizar uma tarefa por ID;
     - Excluir uma tarefa por ID.
+
+### Instalação e Configuração
+1.Clone o repositório:
+   ```bash
+   git clone https://github.com/MoisesCorbellari/ToDo_List
+   cd ToDo_List
+   ```
+2.Instalação das dependências:
+   ```bash
+    pip install pipenv
+    pipenv install
+    pipenv shell
+   ```
+3.Execute as migrações para criar as tabelas no banco de dados:
+   ```bash
+   alembic upgrade head
+   ```
+4.Inicie o servidor FastAPI:
+   ```bash
+   pipenv run uvicorn main:app --reload
+   ```
