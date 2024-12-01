@@ -3,6 +3,8 @@ uvicorn
 requests
 sqlalchemy
 psycopg
+psycopg2
 pydantic
 pytest
 alembic
+python-dotenv
