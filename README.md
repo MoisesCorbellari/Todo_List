@@ -7,7 +7,7 @@ além da associação aos tipos de cada tarefa.
 ToDo List é uma aplicação simples, que permite o usuário organizar suas atividades diárias. O projeto foi desenvolvido com o objetivo aplicar conhecimentos com API's, manipulação de banco de dados com **SQLAlchemy**, uso de migrações de banco de dados com **Alembic**.
 
 ## Tecnologias Utilizadas
-- **Python 3.12.7**: Linguagem de programação principal.
+- **Python 3.12.8**: Linguagem de programação principal.
 - **FastAPI 0.115.4**: Framework para desenvolvimento de APIs.
 - **SQLAlchemy 2.0.36**: Biblioteca ORM (Object-Relational Mapping) para interação com banco de dados.
 - **Alembic 1.14.0**: Ferramente para gerenciamento de versões do banco de dados (migrações).
@@ -64,3 +64,21 @@ ToDo List é uma aplicação simples, que permite o usuário organizar suas ativ
     - Finalizar uma tarefa por ID;
     - Excluir uma tarefa por ID.
 
+### Instalação e Configuração
+1.Clone o repositório e navegue até o diretório do projeto:
+   ```bash
+   git clone https://github.com/MoisesCorbellari/ToDo_List
+   cd ToDo_List
+   ```
+2.Instalação das dependências:
+   ```bash
+    pip install -r requirements.txt
+   ```
+3.Aplicar as migrações pendentes:
+   ```bash
+   alembic upgrade head
+   ```
+4.Inicie o servidor FastAPI:
+   ```bash
+   uvicorn main:app --reload
+   ```
