@@ -64,7 +64,7 @@ ToDo List é uma aplicação simples, que permite o usuário organizar suas ativ
     - Finalizar uma tarefa por ID;
     - Excluir uma tarefa por ID.
 
-### Instalação e Configuração
+### Iniciar aplicação
 1.Clone o repositório e navegue até o diretório do projeto:
    ```bash
    git clone https://github.com/MoisesCorbellari/ToDo_List
