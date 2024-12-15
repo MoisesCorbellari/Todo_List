@@ -8,11 +8,10 @@ ToDo List é uma aplicação simples, que permite o usuário organizar suas ativ
 
 ## Tecnologias Utilizadas
 - **Python 3.12.8**: Linguagem de programação principal.
-- **FastAPI 0.115.4**: Framework para desenvolvimento de APIs.
-- **SQLAlchemy 2.0.36**: Biblioteca ORM (Object-Relational Mapping) para interação com banco de dados.
-- **Alembic 1.14.0**: Ferramente para gerenciamento de versões do banco de dados (migrações).
-- **Pipenv**: Gerenciador de dependências virtual.
 - **Pyenv**: Gerenciador de multiplas versões do Python.
+- **FastAPI**: Framework para desenvolvimento de APIs.
+- **SQLAlchemy**: Biblioteca ORM (Object-Relational Mapping) para interação com banco de dados.
+- **Alembic**: Ferramente para gerenciamento de versões do banco de dados (migrações).
 - **Uvicorn**: Servidor ASGI para execução da aplicação FastAPI.
 - **DBeaver**: Gerenciador de banco de dados universal.
 
