@@ -47,14 +47,6 @@ ToDo List é uma aplicação simples, que permite o usuário organizar suas ativ
 ```
 ## Funcionalidades
 ### A API permite que usuários sejam capazes de criar:
-### - Tipos de Tarefas (Client):
-    - Listar todos os tipos de tarefas;
-    - Buscar os tipos de tarefas por ID;
-    - Criar um novo tipo de tarefa;
-    - Consultar os tipos de tarefas existentes;
-    - Atualizar um tipo de tarefa existente por ID;
-    - Excluir um tipo de tarefa por ID.
-    
 ### - Tarefas (ToDo_List):
     - Buscar todas as tarefas;
     - Obter uma tarefa por ID:
