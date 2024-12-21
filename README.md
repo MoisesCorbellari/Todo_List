@@ -1,14 +1,14 @@
 # ToDo List (Em desenvolvimento)
-Este é um projeto de uma aplicação de lista de tarefas (ToDo List), desenvolvida com FastAPI e SQLAlchemy. 
-O objetivo deste projeto é criar uma API para ajudar a gerenciar tarefas, com funcionalidades de criação, leitura, atualização, exclusão e finalização das tarefas,
-além da associação aos tipos de cada tarefa.
-
-## Introdução
-ToDo List é uma aplicação simples, que permite o usuário organizar suas atividades diárias. O projeto foi desenvolvido com o objetivo aplicar conhecimentos com API's, manipulação de banco de dados com **SQLAlchemy**, uso de migrações de banco de dados com **Alembic**.
+ToDo List é um projeto de lista de tarefas (ToDo List), com o objetivo aplicar conhecimentos com API's, 
+desenvolvida com **SQLAlchemy** para manipulação de banco de dados, uso de migrações de banco de dados com **Alembic**.
+O objetivo deste projeto é criar uma API que permite o usuário organizar suas atividades diárias, com funcionalidades de criação, leitura, atualização, exclusão e finalização das tarefas.
 
 ## Tecnologias Utilizadas
 - **Python 3.12.8**: Linguagem de programação principal.
+<<<<<<< HEAD
 - **Pyenv**: Gerenciador de multiplas versões do Python.
+=======
+>>>>>>> main-dev
 - **FastAPI**: Framework para desenvolvimento de APIs.
 - **SQLAlchemy**: Biblioteca ORM (Object-Relational Mapping) para interação com banco de dados.
 - **Alembic**: Ferramente para gerenciamento de versões do banco de dados (migrações).
@@ -26,11 +26,9 @@ ToDo List é uma aplicação simples, que permite o usuário organizar suas ativ
 
 - project_todo_list/
   - models/                  # Diretório dos modelos ORM
-    - todo_client_model.py   # Modelo da lista dos tipos de tarefas
     - todo_list_model.py     # Modelo da lista de tarefas
   
   - routers/                 # Diretório das rotas da API
-    - todo_client_router.py  # Rotas relacionadas aos tipos de tarefas
     - todo_list_router.py    # Rotas relacionadas a lista de tarefas
   
   - shared/                  # Diretório de arquivos compartilhados
@@ -41,19 +39,10 @@ ToDo List é uma aplicação simples, que permite o usuário organizar suas ativ
 
 - alembic.ini                # Arquivo de configuração do Alembic
 - main.py                    # Arquivo principal para rodar a aplicação
-- Pipfile                    # Gerenciador de dependências (Pipenv)
 - README.md                  # Documentação do projeto
 ```
-## Funcionalidades
+## Funcionalidade
 ### A API permite que usuários sejam capazes de criar:
-### - Tipos de Tarefas (Client):
-    - Listar todos os tipos de tarefas;
-    - Buscar os tipos de tarefas por ID;
-    - Criar um novo tipo de tarefa;
-    - Consultar os tipos de tarefas existentes;
-    - Atualizar um tipo de tarefa existente por ID;
-    - Excluir um tipo de tarefa por ID.
-    
 ### - Tarefas (ToDo_List):
     - Buscar todas as tarefas;
     - Obter uma tarefa por ID:
@@ -62,3 +51,7 @@ ToDo List é uma aplicação simples, que permite o usuário organizar suas ativ
     - Atualizar uma tarefa existente por ID;
     - Finalizar uma tarefa por ID;
     - Excluir uma tarefa por ID.
+<<<<<<< HEAD
+=======
+
+>>>>>>> main-dev

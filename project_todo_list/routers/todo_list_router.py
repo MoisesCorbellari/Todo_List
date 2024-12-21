@@ -1,8 +1,6 @@
 from datetime import date
 from fastapi import APIRouter, Depends, HTTPException
 from pydantic import BaseModel, ConfigDict, Field
-from project_todo_list.models.todo_client_model import ToDoListClient # line added
-from project_todo_list.routers.todo_client_router import ToDoListClientResponse
 from shared.dependencies import get_db
 from sqlalchemy.orm import Session
 from project_todo_list.models.todo_list_model import Task
@@ -17,7 +15,6 @@ class ToDoListResponse(BaseModel):
     description: str
     created: date
     completed: bool
-    todo: ToDoListClientResponse | None = None
 
     class Config:
         model_config = ConfigDict(
@@ -28,7 +25,6 @@ class ToDoListRequest(BaseModel):
     title: str = Field(min_length=3, max_length=30)
     description: str = Field(min_length=3, max_length=255)
     completed: bool = Field(default=False)
-    task_client_id: int | None = None
 
 @router.get("", response_model=List[ToDoListResponse])
 def get_all_todo_list(db: Session = Depends(get_db)) -> List[ToDoListResponse]:
@@ -43,7 +39,6 @@ def get_todo_list_by_id(id_task: int,
 @router.post("", response_model=ToDoListResponse, status_code=201)
 def create_todo_list(task_request: ToDoListRequest,
                      db: Session = Depends(get_db)) -> ToDoListResponse:
-    valid_task_type(task_request.task_client_id, db)
 
     todo_list = Task(
         **task_request.model_dump() 
@@ -97,9 +92,3 @@ def find_todo_list_by_id(id_task: int, db: Session) -> Task:
         raise NotFound(name="")
     
     return todo_list
-
-def valid_task_type(task_client_id, db): # linha adicionada
-    if task_client_id is not None:
-        ToDo_List = db.get(ToDoListClient, task_client_id) 
-        if ToDo_List is None:
-            raise HTTPException(status_code=422, detail="O tipo de tarefa não existe!") # retornando o objeto
