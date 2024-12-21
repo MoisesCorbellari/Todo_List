@@ -5,10 +5,6 @@ O objetivo deste projeto é criar uma API que permite o usuário organizar suas 
 
 ## Tecnologias Utilizadas
 - **Python 3.12.8**: Linguagem de programação principal.
-<<<<<<< HEAD
-- **Pyenv**: Gerenciador de multiplas versões do Python.
-=======
->>>>>>> main-dev
 - **FastAPI**: Framework para desenvolvimento de APIs.
 - **SQLAlchemy**: Biblioteca ORM (Object-Relational Mapping) para interação com banco de dados.
 - **Alembic**: Ferramente para gerenciamento de versões do banco de dados (migrações).
@@ -51,7 +47,3 @@ O objetivo deste projeto é criar uma API que permite o usuário organizar suas 
     - Atualizar uma tarefa existente por ID;
     - Finalizar uma tarefa por ID;
     - Excluir uma tarefa por ID.
-<<<<<<< HEAD
-=======
-
->>>>>>> main-dev
