@@ -19,17 +19,15 @@ depends_on: Union[str, Sequence[str], None] = None
 
 
 def upgrade():
-    # Remover a chave estrangeira
+    
     op.drop_constraint('ToDo_List_task_client_id_fkey', 'ToDo_List', type_='foreignkey')
 
-    # Remover a coluna que depende da chave estrangeira
     op.drop_column('ToDo_List', 'task_client_id')
 
-    # Agora, remover a tabela ToDo_Client
     op.drop_table('ToDo_Client')
 
 def downgrade():
-    # Recriar a tabela ToDo_Client
+
     op.create_table(
         'ToDo_Client',
         sa.Column('id', sa.Integer(), nullable=False),
@@ -37,8 +35,6 @@ def downgrade():
         sa.PrimaryKeyConstraint('id')
     )
 
-    # Recriar a coluna na tabela ToDo_List
     op.add_column('ToDo_List', sa.Column('task_client_id', sa.Integer(), nullable=True))
 
-    # Recriar a chave estrangeira
     op.create_foreign_key('ToDo_List_task_client_id_fkey', 'ToDo_List', 'ToDo_Client', ['task_client_id'], ['id'])
