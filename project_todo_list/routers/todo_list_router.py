@@ -49,33 +49,17 @@ def create_todo_list(task_request: ToDoListRequest,
     db.refresh(todo_list) 
     return todo_list 
 
-@router.put("/{id_task}", response_model=ToDoListResponse, status_code=200)
-def update_todo_list_by_id(id_task: int,
-                     task_request: ToDoListRequest,
-                     db: Session = Depends(get_db)) -> ToDoListResponse:
-    todo_list = find_todo_list_by_id(id_task, db)
-    todo_list.title = task_request.title
-    todo_list.description = task_request.description
-    todo_list.completed = task_request.completed
-    
-    db.add(todo_list) 
-    db.commit() 
-    db.refresh(todo_list) 
-    return todo_list 
-
-@router.post("/{id_task}/finished", response_model=ToDoListResponse, status_code=200)
-def completed_todo_list_by_id(id_task: int,
-                     db: Session = Depends(get_db)) -> ToDoListResponse:
+@router.put("/{id_task}/finished", response_model=ToDoListResponse, status_code=200)
+def update_todo_list_by_id(id_task: int, task_request: ToDoListRequest, db: Session = Depends(get_db)) -> ToDoListResponse:
     todo_list = find_todo_list_by_id(id_task, db)
 
-    if todo_list.completed:
-        raise HTTPException(status_code=400, detail="Tarefa já foi finalizada!")
-    
-    todo_list.completed = True
+    for field, value in task_request.model_dump(exclude_unset=True).items():
+        if field == "completed" and todo_list.completed and value:
+            raise HTTPException(status_code=400, detail="Tarefa já foi finalizada!")
+        setattr(todo_list, field, value)
 
-    db.add(todo_list) 
-    db.commit() 
-    db.refresh(todo_list) 
+    db.commit()
+    db.refresh(todo_list)
     return todo_list
 
 @router.delete("/{id_task}", status_code=204)

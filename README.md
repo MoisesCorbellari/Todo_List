@@ -44,6 +44,5 @@ O objetivo deste projeto é criar uma API que permite o usuário organizar suas 
     - Obter uma tarefa por ID:
     - Criar uma nova tarefa;
     - Consultar as tarefas existentes por ID;
-    - Atualizar uma tarefa existente por ID;
     - Finalizar uma tarefa por ID;
     - Excluir uma tarefa por ID.
