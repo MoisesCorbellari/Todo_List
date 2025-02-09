@@ -11,7 +11,7 @@ load_dotenv()
 
 database_url = os.getenv("SQLALCHEMY_DATABASE_URL")
 if not database_url:
-    raise ValueError("A variável de ambiente SQLALCHEMY_DATABASE_URL não foi definida.")
+    raise ValueError("A variável de ambiente SQLALCHEMY_DATABASE_URL não foi definida!")
 
 # this is the Alembic Config object, which provides
 # access to the values within the .ini file in use.

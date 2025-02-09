@@ -1,8 +1,8 @@
-"""alterações no env.py
+"""alteração no env.py
 
-Revision ID: 4100971e3d2b
-Revises: 44a925eda918
-Create Date: 2025-01-17 01:06:27.113013
+Revision ID: 01725f5753db
+Revises: 56ce8805b50e
+Create Date: 2025-02-08 03:46:15.645849
 
 """
 from typing import Sequence, Union
@@ -12,8 +12,8 @@ import sqlalchemy as sa
 
 
 # revision identifiers, used by Alembic.
-revision: str = '4100971e3d2b'
-down_revision: Union[str, None] = '44a925eda918'
+revision: str = '01725f5753db'
+down_revision: Union[str, None] = '56ce8805b50e'
 branch_labels: Union[str, Sequence[str], None] = None
 depends_on: Union[str, Sequence[str], None] = None
 
