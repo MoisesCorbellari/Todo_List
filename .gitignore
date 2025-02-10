@@ -3,3 +3,4 @@ frontend_todolist
 __pycache__/
 *.pyc
 *.pyo
+.vscode
