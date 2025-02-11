@@ -49,7 +49,7 @@ def create_todo_list(task_request: ToDoListRequest,
     db.refresh(todo_list) 
     return todo_list 
 
-@router.put("/finished/{id_task}", response_model=ToDoListResponse, status_code=200)
+@router.put("/update/{id_task}", response_model=ToDoListResponse, status_code=200)
 def update_todo_list_by_id(id_task: int, task_request: ToDoListRequest, db: Session = Depends(get_db)) -> ToDoListResponse:
     todo_list = find_todo_list_by_id(id_task, db)
 
