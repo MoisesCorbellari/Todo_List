@@ -26,6 +26,13 @@ class ToDoListRequest(BaseModel):
     description: str = Field(min_length=3, max_length=255)
     completed: bool = Field(default=False)
 
+def find_todolist_by_id(id_task: int, db: Session) -> Task:
+    todo_list = db.get(Task, id_task)
+    if todo_list is None:
+        raise NotFound(name="")
+    
+    return todo_list
+
 @router.get("/get-all", response_model=List[ToDoListResponse])
 def get_all_todo_list(db: Session = Depends(get_db)) -> List[ToDoListResponse]:
     return db.query(Task).all()
@@ -33,7 +40,7 @@ def get_all_todo_list(db: Session = Depends(get_db)) -> List[ToDoListResponse]:
 @router.get("/get-by-id/{id_task}", response_model=ToDoListResponse)
 def get_todo_list_by_id(id_task: int,
                         db: Session = Depends(get_db)) -> List[ToDoListResponse]:
-    todo_list: Task = find_todo_list_by_id(id_task, db)
+    todo_list: Task = find_todolist_by_id(id_task, db)
     return todo_list
 
 @router.post("/create", response_model=ToDoListResponse, status_code=201)
@@ -53,7 +60,7 @@ def create_todo_list(task_request: ToDoListRequest,
 def update_todo_list_by_id(id_task: int,
                             task_request: ToDoListRequest,
                             db: Session = Depends(get_db)) -> ToDoListResponse:
-    todo_list = find_todo_list_by_id(id_task, db)
+    todo_list = find_todolist_by_id(id_task, db)
     
     todo_list.title = task_request.title
     todo_list.description = task_request.description
@@ -66,7 +73,7 @@ def update_todo_list_by_id(id_task: int,
 
 @router.post("/finish/{id_task}", response_model=ToDoListResponse, status_code=200)
 def finish_todo_list_by_id(id_task: int, db: Session = Depends(get_db)) -> ToDoListResponse:
-    todo_list = find_todo_list_by_id(id_task, db)
+    todo_list = find_todolist_by_id(id_task, db)
 
     if todo_list.completed:
         raise HTTPException(status_code=400, detail="Tarefa já foi finalizada!")
@@ -81,14 +88,9 @@ def finish_todo_list_by_id(id_task: int, db: Session = Depends(get_db)) -> ToDoL
 @router.delete("/delete/{id_task}", status_code=204)
 def delete_todo_list_by_id(id_task: int,
                      db: Session = Depends(get_db)) -> None:
-    todo_list = find_todo_list_by_id(id_task, db)
+    todo_list = find_todolist_by_id(id_task, db)
 
     db.delete(todo_list)
     db.commit()
 
-def find_todo_list_by_id(id_task: int, db: Session) -> Task:
-    todo_list = db.get(Task, id_task)
-    if todo_list is None:
-        raise NotFound(name="")
-    
-    return todo_list
+
