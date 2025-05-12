@@ -4,12 +4,12 @@ desenvolvida com **SQLAlchemy** para manipulação de banco de dados, uso de mig
 O objetivo deste projeto é criar uma API que permite o usuário organizar suas atividades diárias, com funcionalidades de criação, leitura, atualização, exclusão e finalização das tarefas.
 
 ## Tecnologias Utilizadas
-- **Python 3.12.8**: Linguagem de programação principal.
+- **Python 3.13.3**: Linguagem de programação principal.
 - **FastAPI**: Framework para desenvolvimento de APIs.
 - **SQLAlchemy**: Biblioteca ORM (Object-Relational Mapping) para interação com banco de dados.
 - **Alembic**: Ferramente para gerenciamento de versões do banco de dados (migrações).
 - **Uvicorn**: Servidor ASGI para execução da aplicação FastAPI.
-- **DBeaver**: Gerenciador de banco de dados universal.
+- **DBeaver**: Gerenciador multiplataforma e universal de bancos de dados.
 
 ## Estrutura do Projeto
 - A estrutura do projeto é organizada da seguinte forma:
