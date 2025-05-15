@@ -3,5 +3,4 @@ FrontEnd_ToDoList
 __pycache__/
 *.pyc
 *.pyo
-.vscode
 ngrok.md

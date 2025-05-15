@@ -15,27 +15,27 @@ O objetivo deste projeto é criar uma API que permite o usuário organizar suas 
 - A estrutura do projeto é organizada da seguinte forma:
 ```plaintext
 - alembic/
-  - versions/                # Diretório das migrações do Alembic
-  - env.py                   # Configuração do ambiente Alembic
-  - script.py.mako           # Script de template para geração de migrações
-  - README                   # Documentação sobre as migrações
+  - versions/                
+  - env.py                   
+  - README                   
+  - script.py.mako           
 
 - project_todo_list/
-  - models/                  # Diretório dos modelos ORM
-    - todo_list_model.py     # Modelo da lista de tarefas
+  - models/                  
+    - todo_list_model.py
   
-  - routers/                 # Diretório das rotas da API
-    - todo_list_router.py    # Rotas relacionadas a lista de tarefas
+  - routers/
+    - todo_list_router.py
   
-  - shared/                  # Diretório de arquivos compartilhados
-    - database.py            # Configuração do banco de dados
-    - dependencies.py        # Dependências do projeto
-    - exception.py           # Arquivo para exceções personalizadas
-    - exceptions_handler.py  # Manipulador de exceções
+  - shared/
+    - database.py
+    - dependencies.py
+    - exception.py
+    - exceptions_handler.py
 
-- alembic.ini                # Arquivo de configuração do Alembic
-- main.py                    # Arquivo principal para rodar a aplicação
-- README.md                  # Documentação do projeto
+- alembic.ini
+- main.py
+- README.md
 ```
 ## Funcionalidade
 ### A API permite que usuários sejam capazes de criar:
