@@ -8,13 +8,11 @@ app = FastAPI(
     title="TODO_LIST",
     description="API para gerenciamento de Lista de Tarefas.",
     version="1.0.0",
-    debug=True
 )
 
 @app.get(
     "/",
     summary="Página inicial da API 'Lista de Tarefas.'",
-    description="Retorna uma mensagem simples para confirmar que a API de Lista de Tarefas está ativa."
 )
 def todoList() -> str:
     return "API - Lista de Tarefas."
