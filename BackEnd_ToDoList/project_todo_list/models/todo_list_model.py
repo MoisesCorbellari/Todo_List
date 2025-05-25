@@ -3,7 +3,7 @@ from shared.database import Base
 from datetime import date
 
 class Task(Base):
-    __tablename__ = "Tarefas"
+    __tablename__ = "TODO LIST"
 
     id = Column(Integer, primary_key=True, autoincrement=True)
     title = Column(String(255), nullable=False) 
