@@ -5,17 +5,17 @@ from shared.exception import NotFound
 from shared.exceptions_handler import not_found_exception_handler
 
 app = FastAPI(
-    title="TODO_LIST",
+    title="TODO LIST",
     description="API para gerenciamento de Lista de Tarefas.",
-    version="1.0.0",
+    version="0.0.1",
 )
 
 @app.get(
     "/",
-    summary="Página inicial da API 'Lista de Tarefas.'",
+    summary="Página inicial da API 'Lista de Tarefa!'",
 )
 def todoList() -> str:
-    return "API - Lista de Tarefas."
+    return "TODO LIST - API para Lista de Tarefas."
 
 app.include_router(todo_list_router.router, tags=["Lista de tarefas"])
 app.add_exception_handler(NotFound, not_found_exception_handler)
