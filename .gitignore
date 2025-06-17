@@ -1,5 +1,5 @@
 .env
-FrontEnd_ToDoList
+frontend_todolist/
 __pycache__/
 *.pyc
 *.pyo
