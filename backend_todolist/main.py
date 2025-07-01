@@ -5,7 +5,7 @@ from shared.exception import NotFound
 from shared.exceptions_handler import not_found_exception_handler
 
 app = FastAPI(
-    title="TODO LIST",
+    title="TODO List",
     description="API para gerenciamento de Lista de Tarefas.",
     version="0.0.1",
 )

@@ -14,27 +14,41 @@ O objetivo deste projeto é criar uma API que permite o usuário organizar suas 
 ## Estrutura do Projeto
 - A estrutura do projeto é organizada da seguinte forma:
 ```plaintext
-- alembic/
-  - versions/                
-  - env.py                   
-  - README                   
-  - script.py.mako           
+- backend_todolist/
+  - alembic/
+    - versions/                
+    - env.py                   
+    - README                   
+    - script.py.mako           
 
-- project_todo_list/
-  - models/                  
-    - todo_list_model.py
-  
-  - routers/
-    - todo_list_router.py
-  
-  - shared/
-    - database.py
-    - dependencies.py
-    - exception.py
-    - exceptions_handler.py
+  - project_todo_list/
+    - models/                  
+      - todo_list_model.py
+    
+    - routers/
+      - todo_list_router.py
+    
+    - shared/
+      - database.py
+      - dependencies.py
+      - exception.py
+      - exceptions_handler.py
 
-- alembic.ini
-- main.py
+  - alembic.ini
+  - main.py
+  - requirements.txt -> arquivo com as dependências do projeto
+
+- frontend_todolist/
+  - assets/
+    - gradientbg.jpg
+    - logo.png
+  
+  - html/
+    - main.html
+
+  - style/
+    - main.css
+
 - README.md
 ```
 ## Funcionalidade
