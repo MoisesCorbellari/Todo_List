@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lista de Tarefas</title>
+  <link rel="icon" href="../assets/logo.png" type="image/png">
+  <link rel="stylesheet" href="../style/main.css">
+</head>
+
+<body>
+  <header class="header">
+    <h1 class="name">Lista de Tarefas</h1>
+  </header>
+
+  <main class="container">
+    
+    <section class="app">
+      <p class="addTitle">Adicionar tarefa</p>
+
+      <form id="taskForm">
+      
+        <label class="title" for="taskTitle">Título da tarefa *</label>
+        <input class="taskTitle" id="taskTitle" name="taskTitle" placeholder="Título da tarefa" required>
+
+        <label class="title" for="taskDescription">Descrição da tarefa</label>
+        <textarea class="taskDescription" id="taskDescription" name="taskDescription" placeholder="Digite a descrição da tarefa (opcional)"></textarea>
+        
+        <button class="button" type="submit" id="addTask">Adicionar tarefa</button>
+      </form>
+    </section>
+
+    <section>
+      <div class="taskgroup" type="submit" id="taskgroup">
+        <h3 class="tasks" id="registered">Cadastradas</h3>
+        <h3 class="tasks" id="pending">Pendentes</h3>
+        <h3 class="tasks" id="completed">Finalizadas</h3>
+      </div>
+  </section>
+  </main>
+
+</body>
+</html>
+  

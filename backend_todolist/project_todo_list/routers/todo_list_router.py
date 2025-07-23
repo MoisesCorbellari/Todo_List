@@ -53,7 +53,7 @@ def update_todo_list_by_id(id_task: int,
     db.refresh(todo_list)
     return todo_list
 
-@router.post("/finish/{id_task}", response_model=ToDoListResponse, status_code=200)
+@router.post("/finish/{id_task}", response_model=ToDoListResponse, status_code=200) #endpoint para finalizar tarefas
 def finish_todo_list_by_id(id_task: int, db: Session = Depends(get_db)) -> ToDoListResponse:
     todo_list = find_todolist_by_id(id_task, db)
 

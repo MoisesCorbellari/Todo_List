@@ -6,8 +6,10 @@ from shared.exceptions_handler import not_found_exception_handler
 
 app = FastAPI(
     title="TODO List",
-    description="API para gerenciamento de Lista de Tarefas.",
-    version="0.0.1",
+    description="""
+    API para gerenciamento de Lista de Tarefas (To-Do List API), que fornece endpoints para operações CRUD (Create, Read, Update, Delete), além de um endpoint específico para finalizar tarefas.
+    """,
+    version="0.1.0",
 )
 
 @app.get(

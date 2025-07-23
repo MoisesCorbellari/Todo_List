@@ -1,11 +1,8 @@
-fastapi
-uvicorn
+fastapi[standard]
+uvicorn[standard]
 requests
 sqlalchemy
-psycopg
-psycopg2
+psycopg[binary]
 pydantic
-pytest
 alembic
 python-dotenv
-debugpy

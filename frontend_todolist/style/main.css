@@ -9,7 +9,7 @@ body {
   padding: 20px;
 }
 
-.head {
+.header {
   color: #fff;
   border-radius: 3rem;
   text-align: center;
@@ -18,18 +18,7 @@ body {
 .name {
   font-size: 2rem;
   margin: 0px;
-  background: url("../assets/gradientbg.jpg") center;
-  background-size: cover;
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-  animation: animate 10s linear infinite;
-}
-
-@keyframes animate {
-  to {
-    background-position-x: -200px;
-  }
+  color: #848484;
 }
 
 .container {
@@ -52,6 +41,7 @@ body {
   overflow: auto;
   z-index: auto;
   background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .addTitle {
@@ -75,6 +65,8 @@ body {
   box-sizing: border-box;
   font-size: 1.2rem;
   font-family: inherit;
+  text-align: center;
+  width: 40rem;
 }
 
 .taskDescription {
@@ -89,6 +81,7 @@ body {
   min-height: 5rem;
   font-size: 1.2rem;
   font-family: inherit;
+  text-align: center;
 }
 
 .button {
@@ -108,4 +101,46 @@ body {
   background: #D1F0E0;
   color: #1B4242;
   transition: 0.5s;
+}
+
+.tasks{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 1rem;
+  padding: 0.5rem;
+  margin: 0.5rem;
+  border-radius: 1rem;
+  border: 2px solid #685C85;
+  box-sizing: border-box;
+  overflow: auto;
+  z-index: auto /*faz com que o z-index seja o mesmo do background*/;
+  background-color: #fff;
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-family: inherit;
+  transition: 0.5s;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* leve sombra */
+}
+
+.tasks:hover,
+.tasks:focus {
+  background-color: #dac1f5; /* leve mudança de fundo ao passar o mouse */
+  transform: translateY(-2px); /* eleva levemente o elemento */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* sombra mais destacada */
+  outline: none; /* remove contorno padrão do navegador */
+}
+
+.taskgroup{
+  display: flex;
+  flex-direction: row;
+  gap: 9rem;
+  margin: 0.5rem;
+  border-radius: 1rem;
+  box-sizing: border-box;
+  overflow: auto;
+  z-index: auto /*faz com que o z-index seja o mesmo do background*/;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* leve sombra */
 }
