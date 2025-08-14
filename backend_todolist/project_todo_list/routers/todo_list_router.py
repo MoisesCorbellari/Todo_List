@@ -6,7 +6,7 @@ from typing import List
 from shared.exception import NotFound
 from project_todo_list.schemas.schema import ToDoListRequest, ToDoListResponse
 
-router = APIRouter(prefix='/ToDo_List')
+router = APIRouter(prefix='/ToDo_List', tags=["Lista de tarefas"])
 
 def find_todolist_by_id(id_task: int, db: Session) -> Task:
     todo_list = db.get(Task, id_task)

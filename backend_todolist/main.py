@@ -19,7 +19,7 @@ app = FastAPI(
 def todoList() -> str:
     return "To-Do List - API para Lista de Tarefas."
 
-app.include_router(todo_list_router.router, tags=["Lista de tarefas"])
+app.include_router(todo_list_router.router)
 app.add_exception_handler(NotFound, not_found_exception_handler)
 
 if __name__ == "__main__":
