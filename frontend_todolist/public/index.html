@@ -5,9 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Lista de Tarefas</title>
-  <link rel="icon" href="../assets/logo.png" type="image/png">
-  <link rel="stylesheet" href="../style/main.css">
-  <link rel="stylesheet" href="../actions/main.js">
+  <link rel="icon" href="../src/assets/img/logo.png" type="image/png">
+  <link rel="stylesheet" href="../styles/main.css">
 </head>
 
 <body>
@@ -23,7 +22,7 @@
       <form id="taskForm">
       
         <label class="title" for="taskTitle">Título da tarefa *</label>
-        <input class="taskTitle" id="taskTitle" name="taskTitle" placeholder="Título da tarefa" required>
+        <input class="taskTitle" id="tasktitle" name="taskTitle" placeholder="Título da tarefa" required>
 
         <label class="title" for="taskDescription">Descrição da tarefa</label>
         <textarea class="taskDescription" id="taskDescription" name="taskDescription" placeholder="Digite a descrição da tarefa (opcional)"></textarea>
@@ -41,6 +40,7 @@
   </section>
   </main>
 
+  <script src="../src/actions/message.js"></script>
 </body>
 </html>
   
