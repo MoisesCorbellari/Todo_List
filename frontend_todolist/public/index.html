@@ -15,20 +15,18 @@
   </header>
 
   <main class="container">
-    
+
     <section class="app">
       <p class="addTitle">Adicionar tarefa</p>
 
-      <form id="taskForm">
-      
-        <label class="title" for="taskTitle">Título da tarefa *</label>
-        <input class="taskTitle" id="tasktitle" name="taskTitle" placeholder="Título da tarefa" required>
 
-        <label class="title" for="taskDescription">Descrição da tarefa</label>
-        <textarea class="taskDescription" id="taskDescription" name="taskDescription" placeholder="Digite a descrição da tarefa (opcional)"></textarea>
-        
-        <button class="button" type="submit" id="addTask">Adicionar tarefa</button>
-      </form>
+      <label class="title" for="taskTitle">Título da tarefa *</label>
+      <input class="taskTitle" id="taskTitle" name="taskTitle" placeholder="Título da tarefa" required>
+
+      <label class="title" for="taskDescription">Descrição da tarefa</label>
+      <textarea class="taskDescription" id="taskDescription" name="taskDescription" placeholder="Digite a descrição da tarefa (opcional)"></textarea>
+
+      <button class="button" type="submit" id="addTask" onclick="adicionaTarefa()">Adicionar tarefa</button>
     </section>
 
     <section>
@@ -37,10 +35,15 @@
         <h3 class="tasks" id="pending">Pendentes</h3>
         <h3 class="tasks" id="completed">Finalizadas</h3>
       </div>
-  </section>
+    </section>
+
+    <section style="width: 44rem;" id="tabela">
+    </section>
+
+
   </main>
 
   <script src="../src/services/message.js"></script>
 </body>
+
 </html>
-  
