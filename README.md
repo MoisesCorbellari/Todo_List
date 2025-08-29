@@ -4,7 +4,7 @@ Foi desenvolvida com **SQLAlchemy** para manipulação do banco de dados e utili
 O propósito deste projeto é criar uma API que permita ao usuário organizar suas atividades diárias, oferecendo funcionalidades para criar, ler, atualizar, excluir e finalizar tarefas.
 
 ### Tecnologias Utilizadas
-- **Python 3.13.5**: Linguagem de programação principal
+- **Python 3.13.7**: Linguagem de programação principal
 - **FastAPI**: Framework para desenvolvimento de APIs
 - **SQLAlchemy**: Biblioteca ORM (Object-Relational Mapping) para interação com banco de dados
 - **Alembic**: Ferramenta para gerenciar migrações de banco de dados
