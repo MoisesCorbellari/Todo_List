@@ -18,7 +18,7 @@ body {
 .name {
   font-size: 2rem;
   margin: 0px;
-  color: #848484;
+  color: #243b55;
 }
 
 .container {
@@ -36,22 +36,18 @@ body {
   padding: 1rem;
   margin: 20px auto;
   border-radius: 1rem;
-  border: 2px solid #685c85;
+  border: 2px solid transparent;
+  background: linear-gradient(#fff, #fff) padding-box, /* fundo branco */
+              linear-gradient(45deg, #203A4C, #685C85) border-box; /*gradiente na borda*/
   box-sizing: border-box;
   overflow: auto;
   z-index: auto;
 }
 
-.addTitle {
-  text-align: center;
-  padding: 10px;
-  margin: 10px 0;
-  font-size: 1.5rem;
-}
-
 .title {
   font-size: 1.3rem;
   margin: 10px 0 5px;
+  
 }
 
 .taskTitle {
@@ -59,7 +55,9 @@ body {
   margin: 6px;
   padding: 1rem;
   border-radius: 1rem;
-  border: 2px solid #8f87ab;
+  border: 2px solid transparent; /*borda base*/
+  background: linear-gradient(#fff, #fff) padding-box, /* fundo branco */
+              linear-gradient(45deg, #203A4C, #685C85) border-box; /*gradiente na borda*/
   box-sizing: border-box;
   font-size: 1.2rem;
   font-family: inherit;
@@ -72,7 +70,9 @@ body {
   margin: 6px;
   padding: 1rem;
   border-radius: 1rem;
-  border: 2px solid #8f87ab;
+  border: 2px solid transparent; /*borda base*/
+  background: linear-gradient(#fff, #fff) padding-box, /*fundo branco*/
+              linear-gradient(45deg, #203A4C, #685C85) border-box; /*gradiente na borda*/
   width: 40rem;
   box-sizing: border-box;
   resize: vertical;
@@ -87,9 +87,9 @@ body {
   margin: auto;
   padding: 10px 20px;
   border-radius: 1rem;
-  border-color: #4fbdba;
+  border-color: #141e30;
   background: #fff;
-  color: #5f4b8b;
+  color: #21324A;
   cursor: pointer;
   font-size: 1.3rem;
   font-family: inherit;
@@ -97,7 +97,7 @@ body {
 
 .button:hover {
   background: #fffafa;
-  transition: 0.5s;
+  transition: 0.10s;
 }
 
 .tasks {
@@ -108,7 +108,7 @@ body {
   padding: 0.5rem;
   margin: 0.5rem;
   border-radius: 1rem;
-  border: 2px solid #d0c7e4;
+  border: 1px solid #203A4C;
   box-sizing: border-box;
   overflow: auto;
   z-index: auto /*faz com que o z-index seja o mesmo do background*/;
