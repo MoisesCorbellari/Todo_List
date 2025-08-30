@@ -1,7 +1,6 @@
-# To-Do List API (Em desenvolvimento)
-To-Do List é um projeto de lista de tarefas com o objetivo de aplicar conhecimentos em APIs.  
-Foi desenvolvida com **SQLAlchemy** para manipulação do banco de dados e utiliza **Alembic** para migrações.  
-O propósito deste projeto é criar uma API que permita ao usuário organizar suas atividades diárias, oferecendo funcionalidades para criar, ler, atualizar, excluir e finalizar tarefas.
+# DoUp - Lista de Tarefas (Em desenvolvimento)
+O DoUp - Lista de Tarefas é um projeto para aplicação prática de conhecimentos em APIs.  
+Desenvolvido com **SQLAlchemy** para manipulação do banco de dados e **Alembic** para migrações, o projeto fornece uma API que permita ao usuário organizar suas atividades diárias, oferecendo funcionalidades para criar, ler, atualizar, excluir e finalizar tarefas.
 
 ### Tecnologias Utilizadas
 - **Python 3.13.7**: Linguagem de programação principal

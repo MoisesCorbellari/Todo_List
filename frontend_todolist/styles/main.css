@@ -87,17 +87,26 @@ body {
   margin: auto;
   padding: 10px 20px;
   border-radius: 1rem;
-  border-color: #141e30;
-  background: #fff;
   color: #21324A;
+  border: 2px solid #203A4C;
+  background: white;
   cursor: pointer;
   font-size: 1.3rem;
   font-family: inherit;
+  transition: all 0.1s ease; /* transição suave */
 }
 
-.button:hover {
-  background: #fffafa;
-  transition: 0.10s;
+.button:hover,
+.button:focus {
+  background: #FFF;
+  transition: 0.20s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* sombra mais destacada */
+}
+
+.button:active{
+  background: #f8fafc; /* cor enquanto pressionado */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* sombra mais baixa */
+  transform: translateY(2px); /* efeito de pressionar */
 }
 
 .tasks {
