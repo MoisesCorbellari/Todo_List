@@ -18,7 +18,7 @@ A estrutura do projeto é organizada da seguinte forma:
 ```plaintext
 backend_todolist/
   alembic/
-    versions/                
+    versions/              
     env.py                   
     README                   
     script.py.mako           
@@ -26,9 +26,10 @@ backend_todolist/
   project_todo_list/
     models/                  
       todo_list_model.py
-    
     routers/
       todo_list_router.py
+    schemas/
+      schema.py
     
     shared/
       database.py
@@ -38,18 +39,21 @@ backend_todolist/
 
   alembic.ini
   main.py
-  requirements.txt # arquivo com as dependências do projeto
+  requirements.txt -> arquivo com as dependências do projeto
 
 frontend_todolist/
-  assets/
-    gradientbg.jpg
-    logo.png
-  
-  html/
-    main.html
-
+  public/
+    index.html
+  src/
+    assets/
+      img/
+        logom.webp
+    services/
+      main.js
+      message.js
   style/
     main.css
+.gitignore
 
 README.md
 ```
