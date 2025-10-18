@@ -1,6 +1,5 @@
 .env
-FrontEnd_ToDoList
 __pycache__/
 *.pyc
 *.pyo
-ngrok.md
+usarreact.md

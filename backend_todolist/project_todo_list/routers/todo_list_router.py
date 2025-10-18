@@ -1,30 +1,12 @@
-from datetime import date
 from fastapi import APIRouter, Depends, HTTPException
-from pydantic import BaseModel, ConfigDict, Field
 from shared.dependencies import get_db
 from sqlalchemy.orm import Session
 from project_todo_list.models.todo_list_model import Task
 from typing import List
 from shared.exception import NotFound
+from project_todo_list.schemas.schema import ToDoListRequest, ToDoListResponse
 
-router = APIRouter(prefix='/ToDo_List')
-
-class ToDoListResponse(BaseModel):
-    id: int
-    title: str
-    description: str
-    created: date
-    completed: bool
-
-    class Config:
-        model_config = ConfigDict(
-            from_attributes=True
-        )
-
-class ToDoListRequest(BaseModel):
-    title: str = Field(min_length=3, max_length=30)
-    description: str = Field(min_length=3, max_length=255)
-    completed: bool = Field(default=False)
+router = APIRouter(prefix='/ToDo_List', tags=["Lista de tarefas"])
 
 def find_todolist_by_id(id_task: int, db: Session) -> Task:
     todo_list = db.get(Task, id_task)
@@ -71,7 +53,7 @@ def update_todo_list_by_id(id_task: int,
     db.refresh(todo_list)
     return todo_list
 
-@router.post("/finish/{id_task}", response_model=ToDoListResponse, status_code=200)
+@router.post("/finish/{id_task}", response_model=ToDoListResponse, status_code=200) #endpoint para finalizar tarefas
 def finish_todo_list_by_id(id_task: int, db: Session = Depends(get_db)) -> ToDoListResponse:
     todo_list = find_todolist_by_id(id_task, db)
 
