@@ -1,8 +1,0 @@
-[tool.ruff]
-exclude = [
-  "backend_todolist/alembic/versions/*.py",
-]
-
-[tool.ruff.lint.per-file-ignores]
-"backend_todolist/alembic/env.py" = ["E402", "F401"]
-"backend_todolist/alembic/versions/*.py" = ["F401"]
